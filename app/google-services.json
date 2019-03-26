@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "417567287910",
+    "firebase_url": "https://i-aid-a3219.firebaseio.com",
+    "project_id": "i-aid-a3219",
+    "storage_bucket": "i-aid-a3219.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417567287910:android:6506d00d9538bb95",
+        "android_client_info": {
+          "package_name": "in.blogspot.techdroidsz.i_aid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417567287910-aqn12i37kaehr5nvb4kn1sd24smn7i00.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.blogspot.techdroidsz.i_aid",
+            "certificate_hash": "32723ce12ca25b2cf3aebc5e2b62a6379a122086"
+          }
+        },
+        {
+          "client_id": "417567287910-9g1tq63sphnrfbj255ilerhrnjoul19o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTljlsNVAvgTnccIemv5Y0e4LKighp4CI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417567287910-9g1tq63sphnrfbj255ilerhrnjoul19o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
