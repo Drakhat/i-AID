@@ -7,11 +7,10 @@
     tools:context="in.blogspot.techdroidsz.i_aid.MainActivity">
 
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome To i-AID!!"
-        android:layout_centerInParent="true"
-        android:textColor="#1c7654"/>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView">
 
+    </WebView>
 </RelativeLayout>
