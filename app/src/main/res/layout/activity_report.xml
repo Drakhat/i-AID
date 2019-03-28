@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context="in.blogspot.techdroidsz.i_aid.ReportActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Submit Your Report Here!!"
-        android:layout_centerInParent="true"
-        android:id="@+id/msg"
-        android:textColor="#1c7654"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Broadcast"
-        android:layout_below="@+id/msg"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/send"/>
+
 
 </RelativeLayout>
