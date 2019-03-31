@@ -24,6 +24,10 @@ import com.google.android.gms.nearby.messages.NearbyPermissions;
 public class ReportActivity extends AppCompatActivity {
     MessageListener mMessageListener;
     Message mMessage;
+    Button b1;
+    Button b2;
+    Button b3;
+    Button b4;
     @Override
     public void onStart() {
         super.onStart();
@@ -41,8 +45,116 @@ public class ReportActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
-        mMessage = new Message("EMERGENCY!!!".getBytes());
-        mMessageListener = new MessageListener() {
+        b1=(Button) findViewById(R.id.b1);
+        b2=(Button) findViewById(R.id.b2);
+        b3=(Button) findViewById(R.id.b3);
+        b4=(Button) findViewById(R.id.b4);
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // your handler code here
+                mMessage = new Message("EMERGENCY!!!".getBytes());
+                mMessageListener = new MessageListener() {
+                    @Override
+                    public void onFound(Message message) {
+                        Toast.makeText(ReportActivity.this, new String(message.getContent()), Toast.LENGTH_SHORT).show();
+                        new AlertDialog.Builder(ReportActivity.this)
+                                .setTitle(new String(message.getContent()))
+                                .setMessage("Someone near you needs help")
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // Continue with delete operation
+                                    }
+                                })
+                                .setNegativeButton(android.R.string.no, null)
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .show();
+                    }
+                    @Override
+                    public void onLost(Message message) {
+                    }
+                };
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // your handler code here
+                mMessage = new Message("EMERGENCY!!!".getBytes());
+                mMessageListener = new MessageListener() {
+                    @Override
+                    public void onFound(Message message) {
+                        Toast.makeText(ReportActivity.this, new String(message.getContent()), Toast.LENGTH_SHORT).show();
+                        new AlertDialog.Builder(ReportActivity.this)
+                                .setTitle(new String(message.getContent()))
+                                .setMessage("Someone near you needs help")
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // Continue with delete operation
+                                    }
+                                })
+                                .setNegativeButton(android.R.string.no, null)
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .show();
+                    }
+                    @Override
+                    public void onLost(Message message) {
+                    }
+                };
+            }
+        });
+        b3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // your handler code here
+                mMessage = new Message("EMERGENCY!!!".getBytes());
+                mMessageListener = new MessageListener() {
+                    @Override
+                    public void onFound(Message message) {
+                        Toast.makeText(ReportActivity.this, new String(message.getContent()), Toast.LENGTH_SHORT).show();
+                        new AlertDialog.Builder(ReportActivity.this)
+                                .setTitle(new String(message.getContent()))
+                                .setMessage("Someone near you needs help")
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // Continue with delete operation
+                                    }
+                                })
+                                .setNegativeButton(android.R.string.no, null)
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .show();
+                    }
+                    @Override
+                    public void onLost(Message message) {
+                    }
+                };
+            }
+        });
+        b4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // your handler code here
+                mMessage = new Message("EMERGENCY!!!".getBytes());
+                mMessageListener = new MessageListener() {
+                    @Override
+                    public void onFound(Message message) {
+                        Toast.makeText(ReportActivity.this, new String(message.getContent()), Toast.LENGTH_SHORT).show();
+                        new AlertDialog.Builder(ReportActivity.this)
+                                .setTitle(new String(message.getContent()))
+                                .setMessage("Someone near you needs help")
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // Continue with delete operation
+                                    }
+                                })
+                                .setNegativeButton(android.R.string.no, null)
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .show();
+                    }
+                    @Override
+                    public void onLost(Message message) {
+                    }
+                };
+            }
+        });
+        /* mMessageListener = new MessageListener() {
             @Override
             public void onFound(Message message) {
                 Toast.makeText(ReportActivity.this, new String(message.getContent()), Toast.LENGTH_SHORT).show();
@@ -62,5 +174,6 @@ public class ReportActivity extends AppCompatActivity {
             public void onLost(Message message) {
             }
         };
+        */
     }
 }
