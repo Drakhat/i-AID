@@ -28,12 +28,7 @@ public class ReportActivity extends AppCompatActivity {
     Button b2;
     Button b3;
     Button b4;
-    @Override
-    public void onStart() {
-        super.onStart();
-        Nearby.getMessagesClient(ReportActivity.this).publish(mMessage);
-        Nearby.getMessagesClient(this).subscribe(mMessageListener);
-    }
+
 
     @Override
     public void onStop() {
@@ -53,107 +48,55 @@ public class ReportActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                mMessage = new Message("EMERGENCY!!!".getBytes());
-                mMessageListener = new MessageListener() {
-                    @Override
-                    public void onFound(Message message) {
-                        Toast.makeText(ReportActivity.this, new String(message.getContent()), Toast.LENGTH_SHORT).show();
-                        new AlertDialog.Builder(ReportActivity.this)
-                                .setTitle(new String(message.getContent()))
-                                .setMessage("Someone near you needs help")
-                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        // Continue with delete operation
-                                    }
-                                })
-                                .setNegativeButton(android.R.string.no, null)
-                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                .show();
-                    }
-                    @Override
-                    public void onLost(Message message) {
-                    }
-                };
+                mMessage = new Message((b1.getText().toString()).getBytes());
+                Nearby.getMessagesClient(ReportActivity.this).publish(mMessage);
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                mMessage = new Message("EMERGENCY!!!".getBytes());
-                mMessageListener = new MessageListener() {
-                    @Override
-                    public void onFound(Message message) {
-                        Toast.makeText(ReportActivity.this, new String(message.getContent()), Toast.LENGTH_SHORT).show();
-                        new AlertDialog.Builder(ReportActivity.this)
-                                .setTitle(new String(message.getContent()))
-                                .setMessage("Someone near you needs help")
-                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        // Continue with delete operation
-                                    }
-                                })
-                                .setNegativeButton(android.R.string.no, null)
-                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                .show();
-                    }
-                    @Override
-                    public void onLost(Message message) {
-                    }
-                };
+                mMessage = new Message((b2.getText().toString()).getBytes());
+                Nearby.getMessagesClient(ReportActivity.this).publish(mMessage);
+
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                mMessage = new Message("EMERGENCY!!!".getBytes());
-                mMessageListener = new MessageListener() {
-                    @Override
-                    public void onFound(Message message) {
-                        Toast.makeText(ReportActivity.this, new String(message.getContent()), Toast.LENGTH_SHORT).show();
-                        new AlertDialog.Builder(ReportActivity.this)
-                                .setTitle(new String(message.getContent()))
-                                .setMessage("Someone near you needs help")
-                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        // Continue with delete operation
-                                    }
-                                })
-                                .setNegativeButton(android.R.string.no, null)
-                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                .show();
-                    }
-                    @Override
-                    public void onLost(Message message) {
-                    }
-                };
+                mMessage = new Message((b3.getText().toString()).getBytes());
+                Nearby.getMessagesClient(ReportActivity.this).publish(mMessage);
+
             }
         });
         b4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                mMessage = new Message("EMERGENCY!!!".getBytes());
-                mMessageListener = new MessageListener() {
-                    @Override
-                    public void onFound(Message message) {
-                        Toast.makeText(ReportActivity.this, new String(message.getContent()), Toast.LENGTH_SHORT).show();
-                        new AlertDialog.Builder(ReportActivity.this)
-                                .setTitle(new String(message.getContent()))
-                                .setMessage("Someone near you needs help")
-                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        // Continue with delete operation
-                                    }
-                                })
-                                .setNegativeButton(android.R.string.no, null)
-                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                .show();
-                    }
-                    @Override
-                    public void onLost(Message message) {
-                    }
-                };
+                mMessage = new Message((b4.getText().toString()).getBytes());
+                Nearby.getMessagesClient(ReportActivity.this).publish(mMessage);
+
             }
         });
+
+        mMessageListener = new MessageListener() {
+            @Override
+            public void onFound(Message message) {
+                Toast.makeText(ReportActivity.this, new String(message.getContent()), Toast.LENGTH_SHORT).show();
+                new AlertDialog.Builder(ReportActivity.this)
+                        .setTitle(new String(message.getContent()))
+                        .setMessage("Someone near you needs help")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // Continue with delete operation
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, null)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+            }
+            @Override
+            public void onLost(Message message) {
+            }
+        };
         /* mMessageListener = new MessageListener() {
             @Override
             public void onFound(Message message) {

@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".helperWidget"></activity>
+        <activity android:name=".HelperActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
@@ -33,11 +35,26 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/help_widget_info" />
         </receiver>
+
+        <receiver android:name=".helperWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/helper_widget_info" />
+        </receiver>
+
         <meta-data
             android:name="com.google.android.nearby.messages.API_KEY"
             android:value="AIzaSyBTljlsNVAvgTnccIemv5Y0e4LKighp4CI" />
-        <activity android:name=".ReportActivity"></activity>
-        <service android:enabled="true" android:name=".NearbyBackgroundService" />
+
+        <activity android:name=".ReportActivity" />
+
+        <service
+            android:name=".NearbyBackgroundService"
+            android:enabled="true" />
     </application>
 
 </manifest>

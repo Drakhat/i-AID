@@ -10,28 +10,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/b1"
-        android:text="E1"
+        android:text="Fire Emergency"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/b2"
-        android:text="E2"
+        android:text="Water Emergency"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/b1"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/b3"
-        android:text="E3"
+        android:text="Electricity Emergency"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/b2"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/b4"
-        android:text="E4"
+        android:text="Other Emergency"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/b3"/>
 
