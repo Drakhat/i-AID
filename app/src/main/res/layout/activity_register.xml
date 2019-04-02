@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="in.blogspot.techdroidsz.i_aid.RegisterActivity"
-    android:background="#68ffa7">
+    android:background="#bcd7ff">
 
 
     <TextView
@@ -50,7 +50,7 @@
         android:inputType="textPassword"/>
     <Button
         android:id="@+id/reg_create_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="54dp"
@@ -60,10 +60,11 @@
         android:text="Create Account"
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
-        android:textColor="#f44336" />
+        android:textColor="#8d021f"
+        android:textStyle="bold"/>
     <Button
         android:id="@+id/log_page_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="54dp"
@@ -73,7 +74,8 @@
         android:text="Already Member?"
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
-        android:textColor="#f44336" />
+        android:textStyle="bold"
+        android:textColor="#490063" />
 
 
 </RelativeLayout>

@@ -4,11 +4,12 @@
 
     <Button
         android:id="@+id/report_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Report!"
-        android:background="@drawable/round_button_red"
-        android:textColor="#f44336" />
+        android:text="REPORT!"
+        android:background="@drawable/round_button"
+        android:textColor="#490063"
+        android:textStyle="bold"/>
 
 </RelativeLayout>

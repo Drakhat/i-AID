@@ -4,36 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="in.blogspot.techdroidsz.i_aid.ReportActivity">
+    tools:context="in.blogspot.techdroidsz.i_aid.ReportActivity"
+    android:background="#fffce2">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/Rel"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="What Problem You're Facing?"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:background="@drawable/report_main_button"
+        android:textColor="#6f0000"
+        android:clickable="false"/>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:id="@+id/Rel">
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:id="@+id/b1"
         android:text="Fire Emergency"
+        android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"/>
+        android:background="@drawable/emergency_button"
+        android:textColor="#ff4949"/>
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:id="@+id/b2"
+        android:textStyle="bold"
         android:text="Water Emergency"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/b1"/>
+        android:layout_below="@+id/b1"
+        android:background="@drawable/emergency_button"
+        android:textColor="#ff4949"
+        android:layout_marginTop="20dp"/>
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:id="@+id/b3"
+        android:textStyle="bold"
         android:text="Electricity Emergency"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/b2"/>
+        android:layout_below="@+id/b2"
+        android:background="@drawable/emergency_button"
+        android:textColor="#ff4949"
+        android:layout_marginTop="20dp"/>
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:id="@+id/b4"
+        android:textStyle="bold"
         android:text="Other Emergency"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/b3"/>
+        android:layout_below="@+id/b3"
+        android:background="@drawable/emergency_button"
+        android:textColor="#ff4949"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>
 
 
 

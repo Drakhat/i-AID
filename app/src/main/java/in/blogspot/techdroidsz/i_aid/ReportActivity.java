@@ -23,13 +23,20 @@ import com.google.android.gms.nearby.messages.NearbyPermissions;
 
 public class ReportActivity extends AppCompatActivity {
     MessageListener mMessageListener;
+    private static long back_pressed;
     Message mMessage;
     Button b1;
     Button b2;
     Button b3;
     Button b4;
 
-
+    @Override
+    public void onBackPressed()
+    {
+        if (back_pressed + 2000 > System.currentTimeMillis()) finish();
+        else Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT).show();
+        back_pressed = System.currentTimeMillis();
+    }
     @Override
     public void onStop() {
         Nearby.getMessagesClient(this).unpublish(mMessage);

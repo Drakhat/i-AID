@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <Button
         android:id="@+id/helper_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Helper!"
         android:background="@drawable/round_button_red"
-        android:textColor="#f67445" />
+        android:text="HELPER"
+        android:textStyle="bold"
+        android:textColor="#8d021f" />
 
 </RelativeLayout>
