@@ -43,6 +43,16 @@ public class LoginActivity extends AppCompatActivity {
 
   private  Button mReg_btn;
 
+  private static long back_pressed;
+
+  @Override
+  public void onBackPressed()
+  {
+    if (back_pressed + 2000 > System.currentTimeMillis()) finish();
+    else Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT).show();
+    back_pressed = System.currentTimeMillis();
+  }
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
