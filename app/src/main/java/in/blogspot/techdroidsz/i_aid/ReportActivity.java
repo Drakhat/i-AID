@@ -1,5 +1,6 @@
 package in.blogspot.techdroidsz.i_aid;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -9,9 +10,13 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -37,12 +42,7 @@ public class ReportActivity extends AppCompatActivity {
         else Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT).show();
         back_pressed = System.currentTimeMillis();
     }
-    @Override
-    public void onStop() {
-        Nearby.getMessagesClient(this).unpublish(mMessage);
-        Nearby.getMessagesClient(this).unsubscribe(mMessageListener);
-        super.onStop();
-    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +57,21 @@ public class ReportActivity extends AppCompatActivity {
                 // your handler code here
                 mMessage = new Message((b1.getText().toString()).getBytes());
                 Nearby.getMessagesClient(ReportActivity.this).publish(mMessage);
+                //--------------------------------custom toast starts---------------------------------------------------------------
+                LayoutInflater inflater = getLayoutInflater();
+                View layout = inflater.inflate(R.layout.mytoast,
+                        (ViewGroup) findViewById(R.id.custom_toast_container));
+
+                TextView text = (TextView) layout.findViewById(R.id.text);
+                text.setText("Reporting please wait...");
+
+                Toast toast = new Toast(getApplicationContext());
+                toast.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.BOTTOM, 0, 200);
+                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setView(layout);
+                toast.show();
+                //-------------------------------custom toast ends---------------------------------------------------------
+
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +79,20 @@ public class ReportActivity extends AppCompatActivity {
                 // your handler code here
                 mMessage = new Message((b2.getText().toString()).getBytes());
                 Nearby.getMessagesClient(ReportActivity.this).publish(mMessage);
+                //--------------------------------custom toast starts---------------------------------------------------------------
+                LayoutInflater inflater = getLayoutInflater();
+                View layout = inflater.inflate(R.layout.mytoast,
+                        (ViewGroup) findViewById(R.id.custom_toast_container));
+
+                TextView text = (TextView) layout.findViewById(R.id.text);
+                text.setText("Reporting please wait...");
+
+                Toast toast = new Toast(getApplicationContext());
+                toast.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.BOTTOM, 0, 200);
+                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setView(layout);
+                toast.show();
+                //-------------------------------custom toast ends---------------------------------------------------------
 
             }
         });
@@ -72,6 +101,20 @@ public class ReportActivity extends AppCompatActivity {
                 // your handler code here
                 mMessage = new Message((b3.getText().toString()).getBytes());
                 Nearby.getMessagesClient(ReportActivity.this).publish(mMessage);
+                //--------------------------------custom toast starts---------------------------------------------------------------
+                LayoutInflater inflater = getLayoutInflater();
+                View layout = inflater.inflate(R.layout.mytoast,
+                        (ViewGroup) findViewById(R.id.custom_toast_container));
+
+                TextView text = (TextView) layout.findViewById(R.id.text);
+                text.setText("Reporting please wait...");
+
+                Toast toast = new Toast(getApplicationContext());
+                toast.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.BOTTOM, 0, 200);
+                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setView(layout);
+                toast.show();
+                //-------------------------------custom toast ends---------------------------------------------------------
 
             }
         });
@@ -80,6 +123,20 @@ public class ReportActivity extends AppCompatActivity {
                 // your handler code here
                 mMessage = new Message((b4.getText().toString()).getBytes());
                 Nearby.getMessagesClient(ReportActivity.this).publish(mMessage);
+                //--------------------------------custom toast starts---------------------------------------------------------------
+                LayoutInflater inflater = getLayoutInflater();
+                View layout = inflater.inflate(R.layout.mytoast,
+                        (ViewGroup) findViewById(R.id.custom_toast_container));
+
+                TextView text = (TextView) layout.findViewById(R.id.text);
+                text.setText("Reporting please wait...");
+
+                Toast toast = new Toast(getApplicationContext());
+                toast.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.BOTTOM, 0, 200);
+                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setView(layout);
+                toast.show();
+                //-------------------------------custom toast ends---------------------------------------------------------
 
             }
         });
